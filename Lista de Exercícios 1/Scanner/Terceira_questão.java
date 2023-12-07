@@ -47,40 +47,43 @@ public class Terceira_questão {
         
         // calculando a diferença dos intervalos (quando durou)
         int difs = 0, difm = 0, difh = 0;
-        if(h1<h2 || h1==h2){
-           if(h1 == 24){
-            h1 = 0;
-            difh = h2 - h1;
-           }else{
-           difh = h2 - h1;
-           }
+        if(s1<s2 || s1 == s2){
+            if(s1 == 60){
+                s1 = 0;
+                difs += s2 - s1;
+            }else{
+            difs += s2 - s1;
+            }
         }else{
-            difh = (24 - h1) + h2;
+            difs += (60 - s1) + s2;
+            difm--;
         }
         
         if (m1 < m2 || m1 == m2) {
             if(m1==60){
                 m1 = 0;
-                difm = m2 - m1;
+                difm += m2 - m1;
             }else{
-            difm = m2 - m1;
+            difm += m2 - m1;
             }
         } else {
-            difm = (60 - m1) + m2;
+            difm += (60 - m1) + m2;
+            difh--;
         }
         
-        if(s1<s2 || s1 == s2){
-            if(s1 == 60){
-                s1 = 0;
-                difs = s2 - s1;
-            }else{
-            difs = s2 - s1;
-            }
+        if(h1<h2 || h1==h2){
+           if(h1 == 24){
+            h1 = 0;
+            difh += h2 - h1;
+           }else{
+           difh += h2 - h1;
+           }
         }else{
-            difs = (60 - s1) + s2;
+            difh += (24 - h1) + h2;
         }
+     
         // Resultados
-        System.out.println("\nA soma dos intervalos é: " + somah + "h : " + somam + "m : " + somas + "s.");
+        System.out.println("A soma dos intervalos é: " + somah + "h : " + somam + "m : " + somas + "s.");
         System.out.println("\nA diferença dos intervalos é: " + difh + "h : " + difm + "m : " + difs + "s.");
     }
     
