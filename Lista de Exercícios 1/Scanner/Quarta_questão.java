@@ -21,18 +21,19 @@ public class Quarta_questão {
         Scanner leia = new Scanner (System.in);
         System.out.println("Digite um valor inteiro maior ou igual a zero: ");
         long vi = leia.nextLong();
-            while(vi<=0){
+            while(vi<0){
                 System.out.println("Valor inaceitavel. Digite outro valor inteiro maior ou igual a zero: ");
                 vi = leia.nextLong();
             }
-        
-        while(vi>0){
-            vi = vi/10;
-            i++;
+        if(vi==0){
+            System.out.println("O valor inserido tem 1 digito.");
+        }else{
+            while(vi>0){
+                vi = vi/10;
+                i++;
+            }
+            System.out.println("O valor inserido tem " + i + " digito(s).");
         }
-        
-        System.out.println("O valor inserido tem " + i + " digito(s).");
     }
-}
     
 }
