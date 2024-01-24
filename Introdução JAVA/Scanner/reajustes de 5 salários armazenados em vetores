@@ -27,7 +27,7 @@ public class JavaApplication6 {
         double reaj = leia.nextDouble();
         
             for(int i=0; i<5; i++ ){
-                System.out.println("\nSeu salario reajustado e: R$" + (sal[i] + reaj));
+                System.out.println("Seu salario reajustado e: R$" + (sal[i] + reaj));
             }
     }
 }
